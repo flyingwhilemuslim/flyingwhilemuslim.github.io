@@ -1,0 +1,12 @@
+# Site settings
+title: Flying While Muslim
+# email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  We track problems faced by Muslim passengers on airplanes and at airports.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://flyingwhilemuslim.org.uk" # the base hostname & protocol for your site
+
+# Build settings
+exclude: ['Gemfile', 'Gemfile.lock', 'bower_components', 'LICENSE', 'README.md']
+
+markdown: kramdown

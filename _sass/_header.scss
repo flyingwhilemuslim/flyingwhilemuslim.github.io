@@ -1,0 +1,45 @@
+
+.fwm-header {
+  border-top: 12px solid #E7B327;
+  padding-top: 90px;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+
+.fwm-brand {
+  width: 208px;
+  height: 102px;
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  background: #E7B327;
+  box-sizing: border-box;
+  text-align: center;
+  background: url('/assets/images/fwm-logo.png') no-repeat;
+  background-position: center;
+}
+
+.fwm-brand::before,
+.fwm-brand::after {
+  content: '';
+  display: block;
+  background: #efefef;
+  height: 20px;
+  width: 8px;
+  position: absolute;
+}
+
+.fwm-brand::before {
+  top: -20px;
+  left: 44px;
+}
+
+.fwm-brand::after {
+  top: -20px;
+  right: 44px;
+}
+
+.fwm-brand__name {
+  display: none;
+}

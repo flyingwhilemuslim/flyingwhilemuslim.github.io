@@ -1,0 +1,49 @@
+.fwm-hero {
+  min-height: 50vh;
+  padding-top: 10vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 0;
+  background-image: url('/assets/images/hero-at-airport-xs.png');
+}
+
+// Small devices (landscape phones, 34em and up)
+@include media-breakpoint-up(xs) {
+  .fwm-hero {
+    min-height: 60vh;
+    padding-top: 15vh;
+    background-image: url('/assets/images/hero-at-airport-s.png');
+  }
+}
+
+// Medium devices (tablets, 48em and up)
+@include media-breakpoint-up(sm) {
+  .fwm-hero {
+    min-height: 65vh;
+    padding-top: 20vh;
+    background-image: url('/assets/images/hero-at-airport-m.png');
+  }
+}
+
+// Large devices (desktops, 62em and up)
+@include media-breakpoint-up(md) {
+  .fwm-hero {
+    min-height: 75vh;
+    padding-top: 30vh;
+    background-image: url('/assets/images/hero-at-airport-l.png');
+  }
+}
+
+// Large devices (desktops, 62em and up)
+@include media-breakpoint-up(lg) {
+  .fwm-hero {
+    min-height: 80vh;
+    padding-top: 40vh;
+    background-image: url('/assets/images/hero-at-airport-xl.png');
+  }
+}
+
+// Extra large devices (large desktops, 75em and up)
+// @include media-breakpoint-up(xl) {
+// }
