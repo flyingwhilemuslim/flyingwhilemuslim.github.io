@@ -1,13 +1,36 @@
+{% capture title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture canonical_url %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+
+{% capture og_type %}{% if page.url == '/' %}website{% else %}article{% endif %}{% endcapture %}
+{% capture og_title %}{% if page.title %}{{ page.title | strip }}{% else %}{{ site.title | strip }}{% endif %}{% endcapture %}
+{% capture og_image %}{% if page.images %}{{ page.images.large | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/assets/images/fwm-logo.png' | prepend: site.baseurl | prepend: site.url }}{% endif %}{% endcapture %}
+{% capture og_description %}{% if page.meta-description %}{{ page.meta-description | strip_html | strip }}{% else %}{{ site.description | strip_html | strip_newlines | strip }}{% endif %}{% endcapture %}
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico">
+
+  <!-- <meta name="author" content=""> -->
+  <!-- <link rel="icon" href="../../favicon.ico"> -->
 
   <link rel="stylesheet" href="{{ " /assets/styles/main.css " | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <meta property="og:url"                content="{{ canonical_url }}" />
+  <meta property="og:type"               content="{{ og_type }}" />
+  <meta property="og:title"              content="{{ og_title }}" />
+  <meta property="og:description"        content="{{ og_description }}" />
+  <meta property="og:image"              content="{{ og_image }}" />
+  <meta property="og:site_name"          content="{{ site.title }}" />
+
+  <meta name="twitter:card"              content="summary" />
+  <meta name="twitter:url"               content="{{ canonical_url }}" />
+  <meta name="twitter:title"             content="{{ og_title }}" />
+  <meta name="twitter:description"       content="{{ og_description }}" />
+  <meta name="twitter:image"             content="{{ og_image }}" />
+
 </head>
