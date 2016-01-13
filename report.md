@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Report and incident
+title: Report an incident
 permalink: /report/
 ---
 
