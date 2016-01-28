@@ -1,9 +1,26 @@
-<header class="fwm-header">
-  <div class="container">
-    <nav class="navbar navbar-static-top navbar-light">
-      <a class="fwm-brand navbar-brand" href="{{ site.baseurl }}/">
-        <h1 class="fwm-brand__name">{{ site.title }}</h1>
-      </a>
+<header class="fwm-header row">
+
+  <div class="fwm-brand-wrapper col-xs-12 col-md-4">
+    <a class="fwm-brand" href="{{ site.baseurl }}/"><h1 class="fwm-brand__name">{{ site.title }}</h1></a>
+  </div>
+
+  <div class="fwm-navbar-wrapper col-xs-12 col-md-8">
+    <nav class="fwm-navbar navbar navbar-light">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navigation">
+        &#9776;
+      </button>
+      {% if site.pages.size > 0 %}
+      <div class="navbar-toggleable-xs collapse pull-md-right" id="navigation">
+        <ul class="nav navbar-nav">
+          {% for page in site.pages %}{% if page.title %}
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </nav>
   </div>
+
 </header>

@@ -1,18 +1,20 @@
 
 .fwm-header {
   border-top: 12px solid #E7B327;
-  padding-top: 90px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 8px;
   position: relative;
 }
 
+.fwm-brand-wrapper {
+  text-align: center;
+}
 
 .fwm-brand {
   width: 208px;
   height: 102px;
-  display: block;
-  position: absolute;
-  bottom: -16px;
+  display: inline-block;
+  position: relative;
   background: #E7B327;
   box-sizing: border-box;
   text-align: center;
@@ -42,4 +44,17 @@
 
 .fwm-brand__name {
   display: none;
+}
+
+.fwm-navbar-wrapper {
+  text-align: center;
+}
+
+.fwm-navbar {
+  text-align: center;
+}
+
+.navbar-nav .nav-item {
+  float: none;
+  display: inline-block;
 }

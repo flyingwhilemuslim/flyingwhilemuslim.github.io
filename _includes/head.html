@@ -1,4 +1,4 @@
-{% capture title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture title %}{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
 {% capture canonical_url %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
 
 {% capture og_type %}{% if page.url == '/' %}website{% else %}article{% endif %}{% endcapture %}
